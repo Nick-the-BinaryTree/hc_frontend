@@ -1,0 +1,23 @@
+.chatBox {
+  width: 60vw;
+  height: 75vh;
+}
+
+.innerChatBox {
+  width: 55vw;
+  height: 70vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.logText {
+  margin-bottom: auto;
+  overflow-y: auto;
+  word-wrap: break-word;
+}

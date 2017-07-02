@@ -5,6 +5,7 @@ import { Tabs, Tab } from 'material-ui'
 import SwipeableViews from 'react-swipeable-views'
 
 import Resources from './pages/Resources'
+import Communication from './pages/Communication'
 
 import Settings from './components/Settings'
 import SettingsButton from './components/SettingsButton'
@@ -41,9 +42,7 @@ class App extends React.Component {
           onChangeIndex={this.handleChange}
         >
           <Resources />
-          <Slide>
-            <h2 className='headline'>Communication</h2>
-          </Slide>
+          <Communication />
           <Slide>
             <h2>Press Releases</h2>
           </Slide>

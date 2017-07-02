@@ -16,7 +16,7 @@ const Settings = observer(class Settings extends React.Component {
     super(props)
     this.onSubmit = this.onSubmit.bind(this)
   }
-  onSubmit () { // Imperative is more efficient for form validation
+  onSubmit () { // Imperative is more straightfoward for form validation
     let values = {}
     values['old'] = $('#old').val()
     values['new'] = $('#new').val()

@@ -58,6 +58,7 @@ const ResTable = observer(class ResTable extends React.Component {
         rows={rows}
         headerColumns={headers}
         enableDelete
+        className='test'
       />
     )
   }

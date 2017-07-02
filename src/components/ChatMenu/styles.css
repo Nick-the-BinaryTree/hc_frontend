@@ -1,0 +1,6 @@
+.chatMenu {
+  height:75vh;
+  max-width: 20vw;
+  margin-right: 4vw;
+  overflow-y: auto;
+}
