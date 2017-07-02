@@ -1,0 +1,14 @@
+.pane {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+h3 {
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.divider {
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+}
