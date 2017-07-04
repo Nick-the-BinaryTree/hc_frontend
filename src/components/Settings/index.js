@@ -6,6 +6,8 @@ import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import $ from 'jquery'
 
+import { ChatStore } from '../../stores/CommStore'
+
 let passStore = observable({
   oldError: '',
   newError: ''
@@ -42,6 +44,15 @@ const Settings = observer(class Settings extends React.Component {
     }
   }
   render () {
+
+    let res = []
+    for (let i=0; i<ChatStore.length; i++) {
+      res.push(<Checkbox
+                key={ChatStore[i].id}
+                label={ChatStore[i].name}
+               />)
+    }
+
     return (
       <Drawer
         docked={false}
@@ -51,21 +62,9 @@ const Settings = observer(class Settings extends React.Component {
       >
         <form id='listenToForm' className='pane'>
           <h3>Listen to:</h3>
-          <Checkbox label='France' />
-          <Checkbox label='Spain' />
-          <Checkbox label='Canada' />
-          <Checkbox label='Venezuela' />
-          <Checkbox label='France' />
-          <Checkbox label='Spain' />
-          <Checkbox label='Canada' />
-          <Checkbox label='Venezuela' />
-          <Checkbox label='France' />
-          <Checkbox label='Spain' />
-          <Checkbox label='Canada' />
-          <Checkbox label='Venezuela' />
+          {res}
         </form>
-        <br />
-        <hr className='divider' />
+        <br /><br /><hr className='divider' />
         <form id='changePassForm' className='pane'>
           <h3>Don't like your password?</h3>
           <TextField
@@ -90,6 +89,8 @@ const Settings = observer(class Settings extends React.Component {
             primary />
         </form>
         <br /><br /><hr className='divider' />
+        <a href='/admin'><FlatButton label='Admin Panel' primary /></a>
+        <br />
         <FlatButton label='Sign Out' secondary />
       </Drawer>
     )

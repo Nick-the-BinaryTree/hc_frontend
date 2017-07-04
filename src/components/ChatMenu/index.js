@@ -11,7 +11,7 @@ import { ChatStore, CurrentChat } from '../../stores/CommStore'
 const ChatMenu = observer(class ChatMenu extends React.Component {
   render () {
     let res = []
-    for (let i = 0; i < ChatStore.length; i++) {
+    for (let i=0; i<ChatStore.length; i++) {
       res.push(<MenuItem
                 key={ChatStore[i].id}
                 primaryText={ChatStore[i].name}

@@ -10,7 +10,7 @@ import { ChatStore, CurrentChat } from '../../stores/CommStore'
 
 const ChatBox = observer(class ChatBox extends React.Component {
   handleKey (e) {
-    if (e.charCode == 13) {
+    if (e.charCode === 13) {
       ChatStore[CurrentChat.id].log.push($('#sendField').val())
       $('#sendField').val('')
       $('.logText').stop().animate({ scrollTop: $('.logText')[0].scrollHeight }, 1000)
