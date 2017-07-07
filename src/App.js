@@ -6,10 +6,10 @@ import SwipeableViews from 'react-swipeable-views'
 
 import Resources from './pages/Resources'
 import Communication from './pages/Communication'
+import Press from './pages/Press'
 
 import Settings from './components/Settings'
 import SettingsButton from './components/SettingsButton'
-import Slide from './components/Slide'
 
 class App extends React.Component {
   constructor (props) {
@@ -43,9 +43,7 @@ class App extends React.Component {
         >
           <Resources />
           <Communication />
-          <Slide>
-            <h2>Press Releases</h2>
-          </Slide>
+          <Press />
         </SwipeableViews>
         <Settings
           open={this.state.open}

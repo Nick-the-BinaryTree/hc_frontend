@@ -7,7 +7,6 @@ import $ from 'jquery'
 
 import { ChatStore, CurrentChat } from '../../stores/CommStore'
 
-
 const ChatBox = observer(class ChatBox extends React.Component {
   handleKey (e) {
     if (e.charCode === 13) {

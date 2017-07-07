@@ -1,0 +1,14 @@
+.editor {
+  padding: 1em;
+  border: 1px dashed #535f72;
+}
+
+.pressPublish {
+  float: right;
+  margin-right: 1rem;
+  display: block;
+}
+
+.pressPublishWrapper {
+  height: 36px; /* Counters effect of float causing overlap */
+}
